@@ -19,3 +19,9 @@ frontend/.env
 .DS_Store
 Thumbs.db
 .vscode/
+
+# Terraform
+infra/.terraform/
+infra/terraform.tfstate
+infra/terraform.tfstate.backup
+terraform.tfstate
