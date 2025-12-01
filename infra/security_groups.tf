@@ -49,6 +49,13 @@ resource "aws_security_group" "db_sg" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
+ingress {
+  description = "Webhook HTTP"
+  from_port   = 9090
+  to_port     = 9090
+  protocol    = "tcp"
+  cidr_blocks = ["0.0.0.0/0"]
+}
 
   tags = {
     Name = "strapi-db-sg"
